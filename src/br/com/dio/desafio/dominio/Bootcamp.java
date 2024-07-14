@@ -55,6 +55,14 @@ public class Bootcamp {
         this.conteudos = conteudos;
     }
 
+    public void addCurso(String nome, String descricao, int cargaHoraria) {
+        this.getConteudos().add(new Curso(nome, descricao, cargaHoraria));
+    }
+
+    public void addMentoria(String name, String descricao, LocalDate data) {
+        this.getConteudos().add(new Mentoria(name, descricao, data));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
